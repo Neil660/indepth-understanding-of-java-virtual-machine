@@ -31,7 +31,8 @@ public class ThreadDeadLockTestCase_1 {
                 synchronized (lock) {
                     try {
                         lock.wait();
-                    } catch (InterruptedException e) {
+                    }
+                    catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }

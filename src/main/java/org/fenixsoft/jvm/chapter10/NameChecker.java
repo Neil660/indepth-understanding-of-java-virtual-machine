@@ -2,13 +2,21 @@ package org.fenixsoft.jvm.chapter10;
 
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;
-import javax.lang.model.element.*;
+import javax.lang.model.element.Element;
+import javax.lang.model.element.ExecutableElement;
+import javax.lang.model.element.Name;
+import javax.lang.model.element.TypeElement;
+import javax.lang.model.element.VariableElement;
 import javax.lang.model.util.ElementScanner6;
 import java.util.EnumSet;
 
-import static javax.lang.model.element.ElementKind.*;
+import static javax.lang.model.element.ElementKind.ENUM_CONSTANT;
+import static javax.lang.model.element.ElementKind.FIELD;
 import static javax.lang.model.element.ElementKind.INTERFACE;
-import static javax.lang.model.element.Modifier.*;
+import static javax.lang.model.element.ElementKind.METHOD;
+import static javax.lang.model.element.Modifier.FINAL;
+import static javax.lang.model.element.Modifier.PUBLIC;
+import static javax.lang.model.element.Modifier.STATIC;
 import static javax.tools.Diagnostic.Kind.WARNING;
 
 /**
@@ -114,12 +122,14 @@ public class NameChecker {
                     messager.printMessage(WARNING, "名称“" + name + "”应当以小写字母开头", e);
                     return;
                 }
-            } else if (Character.isLowerCase(firstCodePoint)) {
+            }
+            else if (Character.isLowerCase(firstCodePoint)) {
                 if (initialCaps) {
                     messager.printMessage(WARNING, "名称“" + name + "”应当以大写字母开头", e);
                     return;
                 }
-            } else
+            }
+            else
                 conventional = false;
 
             if (conventional) {
@@ -132,7 +142,8 @@ public class NameChecker {
                             break;
                         }
                         previousUpper = true;
-                    } else
+                    }
+                    else
                         previousUpper = false;
                 }
             }
@@ -163,7 +174,8 @@ public class NameChecker {
                             break;
                         }
                         previousUnderscore = true;
-                    } else {
+                    }
+                    else {
                         previousUnderscore = false;
                         if (!Character.isUpperCase(cp) && !Character.isDigit(cp)) {
                             conventional = false;

@@ -32,7 +32,8 @@ public class FinalizeEscapeGC {
         Thread.sleep(500);
         if (SAVE_HOOK != null) {
             SAVE_HOOK.isAlive();
-        } else {
+        }
+        else {
             System.out.println("no, i am dead :(");
         }
 
@@ -43,7 +44,8 @@ public class FinalizeEscapeGC {
         Thread.sleep(500);
         if (SAVE_HOOK != null) {
             SAVE_HOOK.isAlive();
-        } else {
+        }
+        else {
             System.out.println("no, i am dead :(");
         }
     }

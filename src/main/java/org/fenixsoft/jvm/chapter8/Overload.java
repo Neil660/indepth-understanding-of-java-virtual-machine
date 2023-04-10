@@ -6,7 +6,6 @@ import java.io.Serializable;
  * @author zzm
  */
 public class Overload {
-
     public static void sayHello(Object arg) {
         System.out.println("hello Object");
     }

@@ -30,7 +30,7 @@ public class JavaVMStackSOF_3 {
                 unused91, unused92, unused93, unused94, unused95,
                 unused96, unused97, unused98, unused99, unused100;
 
-        stackLength ++;
+        stackLength++;
         test();
 
         unused1 = unused2 = unused3 = unused4 = unused5 =
@@ -58,7 +58,8 @@ public class JavaVMStackSOF_3 {
     public static void main(String[] args) {
         try {
             test();
-        }catch (Error e){
+        }
+        catch (Error e) {
             System.out.println("stack length:" + stackLength);
             throw e;
         }

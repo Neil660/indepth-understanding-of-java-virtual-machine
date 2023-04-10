@@ -29,7 +29,8 @@ public class GrandFatherTestCase_1 {
                 MethodHandle mh = lookup().findSpecial(GrandFather.class,
                         "thinking", mt, getClass());
                 mh.invoke(this);
-            } catch (Throwable e) {
+            }
+            catch (Throwable e) {
             }
         }
     }

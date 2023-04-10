@@ -53,10 +53,12 @@ public class ClassModifier {
                     classByte = ByteUtils.bytesReplace(classByte, offset - u2, u2, strLen);
                     classByte = ByteUtils.bytesReplace(classByte, offset, len, strBytes);
                     return classByte;
-                } else {
+                }
+                else {
                     offset += len;
                 }
-            } else {
+            }
+            else {
                 offset += CONSTANT_ITEM_LENGTH[tag];
             }
         }

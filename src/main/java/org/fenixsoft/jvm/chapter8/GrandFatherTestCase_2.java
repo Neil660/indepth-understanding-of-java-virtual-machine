@@ -28,9 +28,11 @@ public class GrandFatherTestCase_2 {
                 MethodType mt = MethodType.methodType(void.class);
                 Field lookupImpl = MethodHandles.Lookup.class.getDeclaredField("IMPL_LOOKUP");
                 lookupImpl.setAccessible(true);
-                MethodHandle mh = ((MethodHandles.Lookup) lookupImpl.get(null)).findSpecial(GrandFather.class,"thinking", mt, GrandFather.class);
+                MethodHandle mh = ((MethodHandles.Lookup) lookupImpl.get(null))
+                        .findSpecial(GrandFather.class, "thinking", mt, GrandFather.class);
                 mh.invoke(this);
-            } catch (Throwable e) {
+            }
+            catch (Throwable e) {
             }
         }
 

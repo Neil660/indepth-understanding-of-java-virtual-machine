@@ -26,7 +26,8 @@ public class JavaclassExecuter {
         try {
             Method method = clazz.getMethod("main", new Class[]{String[].class});
             method.invoke(null, new String[]{null});
-        } catch (Throwable e) {
+        }
+        catch (Throwable e) {
             e.printStackTrace(HackSystem.out);
         }
         return HackSystem.getBufferString();

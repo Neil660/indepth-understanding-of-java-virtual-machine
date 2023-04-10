@@ -2,6 +2,7 @@ package org.fenixsoft.jvm.chapter3;
 
 /**
  * VM参数：+XX:UseSerialGC
+ *
  * @author zzm
  */
 public class TestSerialGCAllocation {
@@ -72,7 +73,6 @@ public class TestSerialGCAllocation {
         allocation6 = null;
         allocation7 = new byte[2 * _1MB];
     }
-
 
 
 }

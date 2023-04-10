@@ -2,13 +2,16 @@ package org.fenixsoft.jvm.chapter8;
 
 /**
  * 单分派、多分派演示
+ *
  * @author zzm
  */
 public class Dispatch {
 
-    static class QQ {}
+    static class QQ {
+    }
 
-    static class _360 {}
+    static class _360 {
+    }
 
     public static class Father {
         public void hardChoice(QQ arg) {
